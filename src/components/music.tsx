@@ -19,7 +19,7 @@ import {
   RotateCcw,
 } from "lucide-react";
 import { useWorld } from "@/lib/world";
-import { useSpotifyPlayer } from "@/lib/use-spotify-player";
+import { useYouTubePlayer } from "@/lib/use-youtube-player";
 import { love, songs, spotifyPlaylist } from "@/config/love";
 import { Chapter, FavoriteButton, Reveal } from "./ui";
 const moodIcons = [
@@ -32,28 +32,27 @@ const moodIcons = [
   Sparkles,
   Headphones,
 ];
-export default function MusicPlayer() {
+export default function MusicPlayer({
+  suspended = false,
+}: {
+  suspended?: boolean;
+}) {
   const { t, toast } = useWorld();
   const [mood, setMood] = useState<number | null>(0);
   const [query, setQuery] = useState("");
   const {
     host,
-    uri: currentUri,
+    videoId: currentVideoId,
     enabled,
     status,
     playing,
     select: selectMedia,
     toggle,
     retry,
-  } = useSpotifyPlayer();
+  } = useYouTubePlayer(suspended);
   const playlist = spotifyPlaylist();
-  const playlistUri = `spotify:playlist:${playlist}`;
-  const activeTrack = songs.find(
-    (song) => currentUri === `spotify:track:${song.spotifyId}`,
-  );
-  const destination = activeTrack
-    ? `https://open.spotify.com/track/${activeTrack.spotifyId}`
-    : `https://open.spotify.com/playlist/${playlist}`;
+  const activeTrack = songs.find((song) => currentVideoId === song.youtubeId);
+  const destination = `https://www.youtube.com/watch?v=${activeTrack?.youtubeId || songs[0].youtubeId}`;
   useEffect(() => {
     document.body.dataset.music = playing ? "playing" : "paused";
     return () => {
@@ -65,7 +64,8 @@ export default function MusicPlayer() {
     if (!enabled || !container) return;
     const label = () => {
       const frame = container.querySelector("iframe");
-      if (frame) frame.title = `${t.playlist}: ${activeTrack?.title || t.playlistName}`;
+      if (frame)
+        frame.title = `${t.playlist}: ${activeTrack?.title || t.playlistName}`;
     };
     label();
     const observer = new MutationObserver(label);
@@ -81,8 +81,13 @@ export default function MusicPlayer() {
           .toLocaleLowerCase()
           .includes(query.trim().toLocaleLowerCase()),
     );
-  const select = (uri: string) => {
-    selectMedia(uri);
+  const select = (video: string) => {
+    selectMedia(video);
+    requestAnimationFrame(() =>
+      document
+        .getElementById("youtube-player")
+        ?.scrollIntoView({ behavior: "smooth", block: "center" }),
+    );
   };
   return (
     <Reveal
@@ -131,7 +136,7 @@ export default function MusicPlayer() {
                 onClick={() => {
                   if (status === "ready") toggle();
                   else if (status === "error") retry();
-                  else select(currentUri || playlistUri);
+                  else select(currentVideoId || songs[0].youtubeId);
                 }}
               >
                 {playing ? (
@@ -141,7 +146,7 @@ export default function MusicPlayer() {
                 )}
               </button>
               <a href={destination} target="_blank" rel="noopener noreferrer">
-                {t.spotify}
+                {t.youtube}
                 <ArrowUpRight size={15} />
               </a>
               <FavoriteButton
@@ -152,15 +157,16 @@ export default function MusicPlayer() {
                 }
               />
             </div>
-            {activeTrack && (
-              <button
-                className="text-link back-to-playlist"
-                onClick={() => select(playlistUri)}
-              >
-                {t.backToPlaylist}
-                <Music2 size={13} />
-              </button>
-            )}
+            <a
+              className="text-link back-to-playlist"
+              href={`https://open.spotify.com/playlist/${playlist}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {t.spotifyPlaylistLink}
+              <Music2 size={13} />
+            </a>
+            <p className="music-provider-note">{t.fullSongNote}</p>
             <div className="sound-waves" aria-hidden="true">
               {Array.from({ length: 25 }, (_, i) => (
                 <i
@@ -224,8 +230,8 @@ export default function MusicPlayer() {
           </div>
           <div className="song-list" role="group" aria-label={t.allSongs}>
             {selected.map((song) => {
-              const uri = `spotify:track:${song.spotifyId}`;
-              const isSelected = currentUri === uri;
+              const video = song.youtubeId;
+              const isSelected = currentVideoId === video;
               return (
                 <div
                   className={"song " + (isSelected ? "selected-song" : "")}
@@ -235,7 +241,7 @@ export default function MusicPlayer() {
                     className="song-select"
                     aria-label={`${t.playSong} ${song.title} — ${song.artist}`}
                     aria-pressed={isSelected}
-                    onClick={() => select(uri)}
+                    onClick={() => select(video)}
                   >
                     <span className={"song-art song-art-" + (song.index % 3)}>
                       <Play
@@ -280,10 +286,10 @@ export default function MusicPlayer() {
         </div>
       </div>
       {enabled && (
-        <div id="spotify-player" className="spotify-embed">
+        <div id="youtube-player" className="youtube-embed">
           <p className="player-status" role="status">
             {status === "error"
-              ? t.spotifyFallback
+              ? t.youtubeFallback
               : status === "loading"
                 ? t.playerLoading
                 : playing
@@ -295,7 +301,7 @@ export default function MusicPlayer() {
               </strong>
             )}
           </p>
-          <div ref={host} />
+          <div ref={host} className="youtube-player-host" />
           {status === "error" && (
             <button className="outline-button player-retry" onClick={retry}>
               <RotateCcw size={15} />
@@ -305,14 +311,14 @@ export default function MusicPlayer() {
           {status === "ready" && !playing && (
             <p className="small">{t.playerHint}</p>
           )}
-          <p className="small">{t.spotifyHelp}</p>
+          <p className="small">{t.youtubeHelp}</p>
           <a
             className="text-link"
             href={destination}
             target="_blank"
             rel="noopener noreferrer"
           >
-            {t.spotifyContinue}
+            {t.youtubeContinue}
             <ArrowUpRight size={15} />
           </a>
         </div>

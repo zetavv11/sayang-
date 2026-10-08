@@ -32,7 +32,7 @@ export default function CommandPalette({
       "home",
       "story",
       "music",
-      "memories",
+      "encouragement",
       "letters",
       "reasons",
       "future",
@@ -83,11 +83,19 @@ export default function CommandPalette({
     },
   ];
   const content = [
-    ...t.memoryCaptions.map((title, i) => ({
-      id: `memory-${i}`,
-      title,
+    ...t.encouragement.moods.map((item, i) => ({
+      id: `encouragement-${i}`,
+      title: item.title,
       kind: t.nav[3],
-      text: t.memoryStories[i],
+      text: `${item.body}
+
+${item.step}`,
+    })),
+    ...t.encouragement.affirmations.map((text, i) => ({
+      id: `affirmation-${i}`,
+      title: text,
+      kind: t.nav[3],
+      text,
     })),
     {
       id: "letter--1",

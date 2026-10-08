@@ -1,5 +1,5 @@
-/* Only public, same-origin assets are cached. Spotify is always network-only. */
-const CACHE = "little-world-v1";
+/* Only public, same-origin assets are cached. External music is always network-only. */
+const CACHE = "little-world-v2";
 self.addEventListener("install", (event) => {
   event.waitUntil(
     caches

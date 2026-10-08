@@ -1,7 +1,7 @@
 {
   "brand": "dunia kecil kita",
   "brandSub": "DIBUAT UNTUKMU, DENGAN CINTA",
-  "nav": ["Dunia kita", "Cerita kita", "Musik", "Kenangan", "Surat cinta"],
+  "nav": ["Dunia kita", "Cerita kita", "Musik", "Semangat", "Surat cinta"],
   "more": "Lainnya",
   "home": "Beranda",
   "close": "Tutup",
@@ -51,7 +51,7 @@
     "Dunia milik kita",
     "Melodi tentang kita",
     "Bagaimana kita menjadi kita",
-    "Hal-hal kecil",
+    "Aku percaya padamu",
     "Kata dari hatiku",
     "Seratus alasan kecil",
     "Bahagia kecil untukmu",
@@ -61,7 +61,7 @@
   "worldDescription": "Tak ada cara yang salah untuk menjelajah. Ikuti apa pun yang membuat hatimu terasa hangat.",
   "chapterCards": [
     ["Lagu tentang kita", "Untuk setiap versi kita."],
-    ["Kenangan kecil", "Momen yang selalu kurindukan."],
+    ["Aku percaya padamu", "Sedikit keberanian untuk setiap harimu."],
     ["Surat untukmu", "Yang ingin disampaikan hatiku."]
   ],
   "flowerMessages": [
@@ -87,11 +87,7 @@
   "playlist": "MUSIK TENTANG KITA",
   "playlistName": "Kamu, berulang kali.",
   "playlistNote": "Kumpulan kecil perasaan yang tak mampu kuungkapkan.",
-  "spotify": "Buka di Spotify",
   "play": "Dengarkan bersama",
-  "spotifyFallback": "Spotify sedang malu-malu. ♡",
-  "spotifyContinue": "Lanjutkan di Spotify",
-  "spotifyHelp": "Pilih lagu di sini dan tinggallah sedikit lebih lama. Ketersediaan pemutaran mengikuti Spotify.",
   "mood": "Pilih perasaanmu.",
   "moods": [
     "Jatuh cinta",
@@ -145,25 +141,6 @@
     "Hari ini",
     "Bersambung"
   ],
-  "memoriesTitle": "Momen yang ingin\nkujalani dua kali.",
-  "memoriesDescription": "Momen kecil yang tak ingin kulupakan. Tempat untuk menyimpan selamanya versi kita.",
-  "memoryCaptions": [
-    "Mengejar cahaya terakhir",
-    "Pagi pelan versi kita",
-    "Sedikit tersesat bersama",
-    "Saat dunia menjadi sunyi"
-  ],
-  "memoryStories": [
-    "Langit yang layak dinikmati. Pengingat untuk memberi waktu bagi keindahan yang singkat.",
-    "Kopi hangat, obrolan tanpa terburu, dan perasaan indah saat tak harus ke mana-mana.",
-    "Jalan terbaik tak selalu yang kita rencanakan. Ayo temukan lebih banyak bersama.",
-    "Hanya laut, angin, dan ruang untuk ribuan kenangan kecil lagi."
-  ],
-  "camera": "Ambil sebuah kenangan",
-  "cameraCaption": "Satu lagi momen yang layak disimpan.",
-  "cameraEmpty": "Ruang kecil untuk kenangan yang belum kita buat.",
-  "filmTitle": "Jika momen adalah film,\nkamu adegan favoritku.",
-  "timeMachine": "Bawa aku kembali",
   "lettersTitle": "Ada yang lebih indah\nditulis dengan hati.",
   "lettersDescription": "Sedikit bagian diriku, kapan pun kamu membutuhkannya.",
   "envelope": "Buka saat kamu siap.",
@@ -374,12 +351,6 @@
   "errorBody": "Ada yang belum mekar dengan baik. Mari coba lagi.",
   "retry": "Coba lagi",
   "gardenAlt": "Buket merah muda dan putih gading dengan daun hijau lembut",
-  "memoryAlt": [
-    "Senja keemasan di padang rumput",
-    "Kedai kopi yang hangat dan tenang",
-    "Sinar matahari menembus hutan hijau",
-    "Ombak lembut menyentuh pantai"
-  ],
   "albumAlt": "Bunga untuk musik tentang kita",
   "partOne": "BAGIAN I",
   "forever": "SEDIKIT LAGI, SELAMANYA",
@@ -496,7 +467,73 @@
   "playerLoading": "Menyiapkan lagumu…",
   "playerReady": "Siap menemanimu.",
   "playerHint": "Kalau musik belum mulai, tekan play di pemutar di bawah.",
-  "backToPlaylist": "Daftar lagu kita",
   "retryPlayer": "Coba pemutarnya lagi",
-  "albumVolume": "vol. 01"
+  "albumVolume": "vol. 01",
+  "encouragement": {
+    "title": "Aku percaya\npadamu.",
+    "description": "Untuk hari ketika dunia terasa terlalu ramai, dan kamu lupa betapa berharganya dirimu. Pulang sebentar ke sini, ya.",
+    "eyebrow": "SEBUAH RUANG UNTUK BERTUMBUH",
+    "choose": "Hari ini, kamu butuh apa?",
+    "moods": [
+      {
+        "label": "Saat kamu lelah",
+        "title": "Istirahat juga bagian dari perjalanan.",
+        "body": "Sayang, kamu nggak harus kuat setiap menit. Aku melihat semua usaha kecilmu, bahkan yang nggak dilihat siapa pun. Hari ini, boleh pelan. Kamu tetap berharga saat beristirahat, sama seperti saat berhasil.",
+        "step": "Letakkan dulu yang kamu kerjakan. Minum air, lemaskan bahumu, dan beri dirimu waktu untuk berhenti sebentar."
+      },
+      {
+        "label": "Saat meragukan diri",
+        "title": "Kamu lebih mampu dari yang kamu kira.",
+        "body": "Perasaan ragu tidak menghapus kemampuanmu. Kamu pernah belajar hal yang dulu terasa mustahil, dan kamu boleh belajar lagi sekarang. Aku bangga pada keberanianmu untuk mencoba, bahkan ketika tanganmu masih gemetar.",
+        "step": "Pilih satu hal yang terasa berat. Pecah jadi langkah paling kecil yang bisa kamu mulai dalam lima menit."
+      },
+      {
+        "label": "Saat takut gagal",
+        "title": "Satu hasil tidak menentukan siapa kamu.",
+        "body": "Kalau hari ini belum berjalan sesuai harapan, kamu boleh kecewa. Tapi jangan jadikan satu hari sulit sebagai ukuran seluruh dirimu. Kamu boleh mengubah arah, meminta bantuan, dan memulai lagi. Aku tetap di pihakmu.",
+        "step": "Tulis satu hal yang kamu pelajari. Cukup satu. Kamu tidak perlu menemukan semua jawaban hari ini."
+      },
+      {
+        "label": "Saat mengejar mimpi",
+        "title": "Pelan-pelan, mimpimu punya tempat.",
+        "body": "Aku suka melihat matamu berbinar saat bercerita tentang hal yang kamu inginkan. Jalanmu tidak harus sama dengan jalan orang lain. Rawat mimpimu dengan langkah yang sanggup kamu jalani. Aku ingin melihatmu tumbuh dengan caramu sendiri.",
+        "step": "Sisihkan sepuluh menit untuk sesuatu yang berarti bagimu. Satu halaman, satu latihan, atau satu awal kecil."
+      }
+    ],
+    "stepLabel": "SATU LANGKAH LEMBUT",
+    "signature": "Aku di sini. Aku mendukungmu. Selalu.",
+    "affirmationLabel": "SIMPAN INI DI HATIMU",
+    "another": "Satu pengingat lagi",
+    "affirmations": [
+      "Kamu tidak harus sempurna untuk pantas dicintai.",
+      "Langkah kecilmu tetap membawa kamu maju.",
+      "Kamu boleh bangga pada usaha yang belum dilihat orang lain.",
+      "Istirahat tidak membuatmu tertinggal. Kamu sedang merawat dirimu.",
+      "Hari yang berat tidak mengurangi nilai dirimu.",
+      "Meminta bantuan juga bentuk keberanian.",
+      "Kamu boleh menjadi pemula, lalu belajar sedikit demi sedikit.",
+      "Aku bangga padamu, bahkan saat yang bisa kamu lakukan hanya melewati hari ini."
+    ],
+    "stepsTitle": "Sedikit baik untuk dirimu.",
+    "stepsDescription": "Pilih yang kamu sanggup. Ini ruang untuk merawat diri, tanpa tuntutan harus menyelesaikan semuanya.",
+    "steps": [
+      "Beri tubuhmu air dan waktu istirahat",
+      "Lakukan satu hal kecil yang berarti untukmu",
+      "Ucapkan satu kalimat baik kepada diri sendiri"
+    ],
+    "progress": "{count} dari {total} kebaikan kecil untuk dirimu",
+    "complete": "Terima kasih sudah merawat dirimu hari ini. ♡"
+  },
+  "storyPhotoAlt": [
+    "Senja keemasan di padang rumput",
+    "Kedai kopi yang hangat dan tenang",
+    "Sinar matahari menembus hutan hijau",
+    "Ombak lembut menyentuh pantai"
+  ],
+  "youtube": "Buka di YouTube",
+  "youtubeFallback": "Video ini belum bisa diputar di sini. Coba lagi atau buka di YouTube.",
+  "youtubeContinue": "Lanjutkan di YouTube",
+  "youtubeHelp": "Video lagu penuh dari kanal artis. Ketersediaan dan iklan mengikuti YouTube.",
+  "spotifyPlaylistLink": "Playlist kita di Spotify",
+  "fullSongNote": "Dengarkan video lagu penuh di sini, ditemani kata-kata untukmu."
 }

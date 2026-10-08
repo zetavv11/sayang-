@@ -29,7 +29,6 @@ import {
   Download,
   RotateCcw,
   Ellipsis,
-  Camera,
   BookOpen,
   LockKeyhole,
 } from "lucide-react";
@@ -39,7 +38,8 @@ import { Chapter, CopyButton, Modal, Reveal } from "./ui";
 import { FlowerGarden, FloatingPetals } from "./garden";
 import Opening from "./opening";
 import MusicPlayer from "./music";
-import { LoveCounter, MemoryGallery, Timeline } from "./story";
+import Encouragement from "./encouragement";
+import { LoveCounter, Timeline } from "./story";
 import { LoveLetters, QuoteMoment, ReasonCards } from "./letters";
 const Playful = dynamic(() => import("./playful").then((m) => m.Playful));
 const Future = dynamic(() => import("./future"));
@@ -247,8 +247,8 @@ export default function World() {
         await copy(location.href);
     }
   };
-  const navIds = ["home", "story", "music", "memories", "letters"];
-  const navIcons = [Heart, BookOpen, Headphones, Camera, Mail];
+  const navIds = ["home", "story", "music", "encouragement", "letters"];
+  const navIcons = [Heart, BookOpen, Headphones, Sparkles, Mail];
   return (
     <div
       className={"world " + (event === "birthday" ? "birthday-world" : "")}
@@ -457,12 +457,12 @@ export default function World() {
               </div>
               <div className="chapter-grid">
                 {t.chapterCards.map(([title, description], i) => {
-                  const Icon = [Music2, Camera, Mail][i];
+                  const Icon = [Music2, Sparkles, Mail][i];
                   return (
                     <a
                       className={"chapter-card chapter-card-" + i}
                       key={i}
-                      href={"#" + ["music", "memories", "letters"][i]}
+                      href={"#" + ["music", "encouragement", "letters"][i]}
                     >
                       <span className="card-index">
                         0{i + 1}
@@ -478,21 +478,9 @@ export default function World() {
                           </>
                         ) : i === 1 ? (
                           <>
-                            <span className="mini-polaroid">
-                              <Image
-                                src="/images/sea.jpg"
-                                alt=""
-                                fill
-                                sizes="120px"
-                              />
-                            </span>
-                            <span className="mini-polaroid back-photo">
-                              <Image
-                                src="/images/sunset.jpg"
-                                alt=""
-                                fill
-                                sizes="120px"
-                              />
+                            <span className="encouragement-emblem">
+                              <Sun size={64} strokeWidth={1} />
+                              <Sparkles size={22} />
                             </span>
                           </>
                         ) : (
@@ -514,10 +502,10 @@ export default function World() {
                 })}
               </div>
             </Reveal>
-            <MusicPlayer />
+            <MusicPlayer suspended={ambient} />
             <QuoteMoment />
             <Timeline />
-            <MemoryGallery />
+            <Encouragement />
             <LoveLetters />
             <ReasonCards />
             <Playful onRain={triggerRain} />

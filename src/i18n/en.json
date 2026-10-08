@@ -1,7 +1,7 @@
 {
   "brand": "a little world",
   "brandSub": "MADE FOR YOU, WITH LOVE",
-  "nav": ["Our world", "Our story", "Music", "Memories", "Love letters"],
+  "nav": ["Our world", "Our story", "Music", "For you", "Love letters"],
   "more": "More",
   "home": "Home",
   "close": "Close",
@@ -51,7 +51,7 @@
     "A world of our own",
     "The sound of us",
     "How we became us",
-    "The little things",
+    "I believe in you",
     "Words from my heart",
     "A hundred little whys",
     "A little joy, just because",
@@ -61,7 +61,7 @@
   "worldDescription": "There is no right way to wander. Just follow whatever makes your heart feel a little warmer.",
   "chapterCards": [
     ["Our soundtrack", "For every version of us."],
-    ["Little memories", "The moments I keep coming back to."],
+    ["I believe in you", "A little courage for every day."],
     ["Letters for you", "Things my heart wants you to know."]
   ],
   "flowerMessages": [
@@ -87,11 +87,7 @@
   "playlist": "THE SOUNDTRACK OF US",
   "playlistName": "You, on repeat.",
   "playlistNote": "A little collection of feelings I couldn’t put into words.",
-  "spotify": "Open in Spotify",
   "play": "Listen together",
-  "spotifyFallback": "Spotify is being shy right now. ♡",
-  "spotifyContinue": "Continue on Spotify",
-  "spotifyHelp": "Choose a song here and stay a little longer. Spotify controls the available playback.",
   "mood": "Pick a feeling.",
   "moods": [
     "In love",
@@ -145,25 +141,6 @@
     "Today",
     "To be continued"
   ],
-  "memoriesTitle": "The moments\nI’d live twice.",
-  "memoriesDescription": "Little moments I never want to forget. A few places to keep our favorite kind of forever.",
-  "memoryCaptions": [
-    "Chasing the last light",
-    "Our kind of slow morning",
-    "Getting a little lost",
-    "Where the world goes quiet"
-  ],
-  "memoryStories": [
-    "A sky worth stopping for. A reminder to make time for the beautiful, fleeting things.",
-    "Warm coffee, unhurried conversation, and the lovely feeling of having nowhere else to be.",
-    "The best paths aren’t always the ones we planned. Let’s find a few more together.",
-    "Just the sea, the breeze, and room for a thousand more little memories."
-  ],
-  "camera": "Take a memory",
-  "cameraCaption": "Another moment worth keeping.",
-  "cameraEmpty": "A little space for a memory we haven’t made yet.",
-  "filmTitle": "If moments were a movie,\nyou’d be my favorite scene.",
-  "timeMachine": "Take me back",
   "lettersTitle": "Some things are better\nwritten by heart.",
   "lettersDescription": "A little piece of me, for whenever you need it.",
   "envelope": "Open when you’re ready.",
@@ -374,12 +351,6 @@
   "errorBody": "Something didn’t quite bloom. Let’s try again.",
   "retry": "Try again",
   "gardenAlt": "A soft blush and ivory bouquet with delicate green leaves",
-  "memoryAlt": [
-    "Golden sunset over a meadow",
-    "A warm and quiet coffee shop",
-    "Sunlight through a green forest",
-    "Soft waves meeting the shore"
-  ],
   "albumAlt": "Blossoms for the soundtrack of us",
   "partOne": "PART I",
   "forever": "A LITTLE MORE, FOREVER",
@@ -496,7 +467,73 @@
   "playerLoading": "Getting your song ready…",
   "playerReady": "Ready when you are.",
   "playerHint": "If the music hasn’t started, press play in the player below.",
-  "backToPlaylist": "Our whole playlist",
   "retryPlayer": "Try the player again",
-  "albumVolume": "vol. 01"
+  "albumVolume": "vol. 01",
+  "encouragement": {
+    "title": "I believe\nin you.",
+    "description": "For the days when the world feels too loud and you forget how much you matter. Come rest here for a while.",
+    "eyebrow": "A LITTLE ROOM TO GROW",
+    "choose": "What do you need today?",
+    "moods": [
+      {
+        "label": "When you feel tired",
+        "title": "Rest is part of the journey, too.",
+        "body": "Love, you do not have to be strong every minute. I see your quiet effort, even the things nobody else notices. You can take today slowly. You matter just as much when you rest as when you achieve.",
+        "step": "Put down what you are working on. Drink some water, soften your shoulders, and give yourself a little time to pause."
+      },
+      {
+        "label": "When you doubt yourself",
+        "title": "You are more capable than you think.",
+        "body": "Doubt does not erase your ability. You have learned things that once felt impossible, and you can learn again. I am proud of the courage it takes to try, even with trembling hands.",
+        "step": "Choose one thing that feels difficult. Break it into the smallest step you could start in five minutes."
+      },
+      {
+        "label": "When you fear failure",
+        "title": "One outcome cannot define you.",
+        "body": "If today did not go as you hoped, it is okay to feel disappointed. But one difficult day cannot measure your whole self. You can change direction, ask for help, and begin again. I am still on your side.",
+        "step": "Write down one thing you learned. Just one. You do not need every answer today."
+      },
+      {
+        "label": "When you chase a dream",
+        "title": "Your dreams deserve room to grow.",
+        "body": "I love the way your eyes light up when you talk about what you want. Your path does not have to look like anyone else’s. Care for your dream with steps you can sustain. I want to see you grow in your own way.",
+        "step": "Give ten minutes to something that matters to you. One page, one practice, or one small beginning."
+      }
+    ],
+    "stepLabel": "ONE GENTLE STEP",
+    "signature": "I am here. I am cheering for you. Always.",
+    "affirmationLabel": "KEEP THIS CLOSE",
+    "another": "One more reminder",
+    "affirmations": [
+      "You do not have to be perfect to deserve love.",
+      "Your small steps are still taking you forward.",
+      "You can be proud of effort nobody has noticed yet.",
+      "Rest does not put you behind. You are caring for yourself.",
+      "A difficult day does not make you worth any less.",
+      "Asking for help is a kind of courage, too.",
+      "You are allowed to be a beginner and learn a little at a time.",
+      "I am proud of you, even when all you can do is get through today."
+    ],
+    "stepsTitle": "A little kindness for yourself.",
+    "stepsDescription": "Choose what you have room for. This is a place to care for yourself, without having to finish everything.",
+    "steps": [
+      "Give your body water and time to rest",
+      "Do one small thing that matters to you",
+      "Say something kind to yourself"
+    ],
+    "progress": "{count} of {total} little acts of kindness for yourself",
+    "complete": "Thank you for taking care of yourself today. ♡"
+  },
+  "storyPhotoAlt": [
+    "Golden sunset over a meadow",
+    "A warm and quiet coffee shop",
+    "Sunlight through a green forest",
+    "Soft waves meeting the shore"
+  ],
+  "youtube": "Open on YouTube",
+  "youtubeFallback": "This video could not play here. Try again or open it on YouTube.",
+  "youtubeContinue": "Continue on YouTube",
+  "youtubeHelp": "Full music videos from artist channels. Availability and ads are controlled by YouTube.",
+  "spotifyPlaylistLink": "Our Spotify playlist",
+  "fullSongNote": "Stay for the full music video, and a few words just for you."
 }

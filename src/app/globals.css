@@ -4749,4 +4749,248 @@ html[lang="id"] .title-star {
   }
 }
 
-:root:not([data-theme="night"]) .moods button.selected { color: #814c5c; }
+:root:not([data-theme="night"]) .moods button.selected {
+  color: #814c5c;
+}
+
+/* A quiet place for encouragement. */
+.encouragement-emblem {
+  display: grid;
+  place-items: center;
+  color: var(--rose);
+}
+.encouragement-emblem > svg:last-child {
+  position: absolute;
+  transform: translate(49px, -28px);
+}
+.encouragement-layout {
+  display: grid;
+  grid-template-columns: 0.8fr 1.5fr;
+  gap: 52px;
+  margin-top: 42px;
+}
+.encouragement-choices h3 {
+  font-size: 29px;
+  margin: 14px 0 24px;
+}
+.encouragement-choices [role="group"] {
+  display: grid;
+  gap: 9px;
+}
+.encouragement-choices button {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  width: 100%;
+  padding: 18px 15px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  text-align: left;
+  font-size: 12px;
+}
+.encouragement-choices button > span {
+  flex: 1;
+}
+.encouragement-choices button.selected {
+  background: var(--rose-light);
+  border-color: var(--rose);
+}
+.encouragement-choices button:hover {
+  background: var(--paper-alt);
+}
+.encouragement-botanical {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  color: var(--rose);
+  margin-top: 36px;
+  gap: 10px;
+}
+.encouragement-botanical > svg:first-child {
+  align-self: flex-start;
+}
+.encouragement-letter {
+  background: var(--card);
+  border: 1px solid var(--line);
+  padding: clamp(26px, 4vw, 54px);
+  position: relative;
+  border-radius: 120px 8px 8px 8px;
+  box-shadow: 0 16px 40px #3d443b07;
+}
+.encouragement-number {
+  display: block;
+  text-align: right;
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+.encouragement-spark {
+  color: var(--rose);
+  margin: 22px 0;
+}
+.encouragement-letter h3 {
+  font-size: clamp(32px, 3.2vw, 44px);
+  line-height: 1.1;
+  max-width: 470px;
+  margin-bottom: 23px;
+}
+.encouragement-letter > p {
+  font-size: 14px;
+  line-height: 1.95;
+  color: var(--muted);
+}
+.encouragement-step {
+  border-left: 2px solid var(--rose);
+  padding-left: 20px;
+  margin: 30px 0;
+}
+.encouragement-step p {
+  font-size: 12px;
+  line-height: 1.8;
+  margin-top: 9px;
+}
+.encouragement-signature {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+}
+.encouragement-signature > span {
+  color: var(--rose);
+  font-size: 23px;
+  line-height: 1.25;
+}
+.encouragement-signature > div {
+  display: flex;
+}
+.encouragement-affirmation {
+  text-align: center;
+  padding: 64px 20px;
+  max-width: 780px;
+  margin: 0 auto;
+}
+.encouragement-affirmation > p {
+  font-family: var(--serif);
+  font-size: clamp(28px, 3vw, 40px);
+  line-height: 1.3;
+  margin: 22px 0;
+}
+.encouragement-affirmation > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 13px;
+  flex-wrap: wrap;
+}
+.encouragement-kindness {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 36px 0;
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 60px;
+}
+.encouragement-kindness h3 {
+  font-size: 30px;
+  margin: 12px 0;
+}
+.encouragement-kindness p {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+.kindness-checklist label {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  min-height: 52px;
+  padding: 9px 0;
+  font-size: 13px;
+}
+.kindness-checklist input {
+  accent-color: var(--rose);
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+.kindness-checklist input:checked + span {
+  color: var(--muted);
+  text-decoration: line-through;
+}
+.kindness-checklist > p {
+  margin-top: 14px;
+}
+.youtube-embed {
+  margin: 28px auto 0;
+  max-width: 850px;
+}
+.youtube-player-host {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  min-height: 200px;
+  background: var(--paper-alt);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.youtube-player-host iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+  border: 0;
+}
+.youtube-embed > .small {
+  margin: 13px 0;
+}
+.music-provider-note {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.7;
+  margin-top: 16px;
+}
+@media (max-width: 700px) {
+  .encouragement-layout {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-top: 28px;
+  }
+  .encouragement-choices [role="group"] {
+    grid-template-columns: 1fr 1fr;
+  }
+  .encouragement-choices button {
+    padding: 13px 9px;
+    gap: 8px;
+    font-size: 11px;
+  }
+  .encouragement-choices button > svg:last-child,
+  .encouragement-botanical {
+    display: none;
+  }
+  .encouragement-choices button > svg:first-child {
+    flex-shrink: 0;
+  }
+  .encouragement-letter {
+    border-radius: 75px 6px 6px 6px;
+    padding: 28px 24px;
+  }
+  .encouragement-letter > p {
+    font-size: 13px;
+  }
+  .encouragement-kindness {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .encouragement-signature {
+    align-items: flex-start;
+  }
+  .encouragement-signature > div {
+    flex-shrink: 0;
+  }
+  .encouragement-signature > span {
+    font-size: 21px;
+  }
+  .youtube-player-host {
+    aspect-ratio: auto;
+    height: 220px;
+  }
+}
